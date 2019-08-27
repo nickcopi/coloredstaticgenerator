@@ -1,0 +1,44 @@
+
+<canvas id = "canvas" width = "100" height = "100"></canvas><br>
+Width: <input id = "width" placeholder = "Width?" value="100"><br>
+Height: <input id = "height" placeholder = "Height?" value="100"><br>
+Red: <input id = "red" placeholder = "Red?" value="255"><br>
+Green: <input id = "green" placeholder = "Green?" value="255"><br>
+Blue: <input id = "blue" placeholder = "Blue?" value="255"><br>
+
+
+<script>
+	(function(){
+		let canvas = document.getElementById('canvas'); 
+		let ctx = canvas.getContext('2d');
+		let width = document.getElementById('width');
+		let height = document.getElementById('height');
+		let red = document.getElementById('red');
+		let green = document.getElementById('green');
+		let blue = document.getElementById('blue');
+		setInterval(()=>{
+			updateCanvas();
+	
+		},1000/60);
+		let rnd = (max)=>{
+			max = Number(max);
+			return Math.floor(Math.random() * (max+1));
+		}
+		let updateCanvas = ()=>{
+			canvas.width = width.value;
+			canvas.height = height.value;
+			ctx.clearRect(0,0,canvas.width,canvas.height);
+			ctx.fillRect(0,0,canvas.width,canvas.height);
+			for(let x = 0; x < canvas.width;x++){
+				for(let y = 0; y < canvas.height;y++){
+					ctx.fillStyle = `rgb(${rnd(red.value)},${rnd(green.value)},${rnd(blue.value)})`;
+					ctx.fillRect(x,y,1,1);
+				}
+			}
+
+
+		}
+	
+	}());
+
+</script>
