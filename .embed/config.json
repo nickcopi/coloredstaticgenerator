@@ -1,7 +1,7 @@
 {
 	"name":"Static Maker",
 	"tags":["Visualization"],
-	"description":"Generate random static, with color based on configurable inputs.",
+	"description":"Generate random static with color based on configurable inputs.",
 	"embed":{
 		"width":300,
 		"height":300,
