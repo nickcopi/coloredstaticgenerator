@@ -3,8 +3,8 @@
 	"tags":["Visualization"],
 	"description":"Generate random static with color based on configurable inputs.",
 	"embed":{
-		"width":300,
-		"height":300,
+		"width":800,
+		"height":600,
 		"file":"staticmaker.html"
 	}
 }
